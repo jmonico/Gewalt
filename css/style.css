@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+:root{
+    --color-1: #99C4C8
+}
+
+
+  
+body{
+	font-family: 'Raleway', sans-serif;
+	background-color: #e8eef3;
+
+}
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.container1{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+/*header*/
+.header{
+	background-color: var(--color-1);
+	padding: 12px 0;
+	line-height: 1.5;
+}
+
+.header .logo2 {
+	font-weight: bolder;
+	color: rgb(105, 11, 11);
+	font-size: 5rem;
+  }
+  
+  .header .logo2 span {
+	color: rgb(69, 145, 51);
+  }
+
+.header .logo,
+.header .nav{
+	padding:0 15px;
+}
+.header .logo a{
+	font-size: 30px;
+	color: #525E75;
+	text-transform: capitalize;
+	font-family: 'Quicksand', sans-serif;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header .nav ul li a{
+	display: block;
+	font-size: 19px;
+	text-transform: capitalize;
+	color: #525E75;
+	padding: 10px 0;
+	transition: all 0.5s ease;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.header .nav ul li a:hover{
+	color: #F66B0E;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	cursor: pointer;
+	border:none;
+	display: none;
+	margin-right: 15px;
+}
+.nav-toggler:focus{
+	outline: none;
+	box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+.nav-toggler span{
+    height: 2px;
+    width: 20px;
+    background-color: var(--color-1);
+    display: block;
+    margin:auto;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.nav-toggler.active span{
+	background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-1);
+	transition: all 0.3s ease;
+}
+.nav-toggler span::before{
+	transform: translateY(-6px);
+}
+.nav-toggler.active span::before{
+	transform: rotate(45deg);
+}
+.nav-toggler span::after{
+	transform: translateY(6px);
+}
+.nav-toggler.active span::after{
+	transform: rotate(135deg);
+}
+@media(max-width:991px){
+   .nav-toggler{
+   	display: block;
+   }
+   .header .nav{
+   	width: 100%;
+   	padding:0;
+   	max-height: 0px;
+   	overflow: hidden;
+   	visibility: hidden;
+   	transition: all 0.5s ease;
+   }
+   .header .nav.open{
+   	visibility: visible;
+   }
+   .header .nav ul{
+   	padding:12px 15px 0;
+   	margin-top: 12px;
+   	border-top:1px solid rgba(255,255,255,0.2);
+   }
+   .header .nav ul li{
+   	display: block;
+   	margin:0;
+   }
+}
+.banner{
+	width: 100%;
+	height: 600px;
+	animation: banner 10s infinite linear alternate;
+	background-size: 100% 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@keyframes banner{
+	0%, 20%{
+		background-image: url("https://i.pinimg.com/originals/eb/61/ec/eb61ec6b1b8cabec0fcbed68dee0bcb7.jpg");
+	}
+	25%, 45%{
+		background-image: url("https://ae01.alicdn.com/kf/HTB1Tg50XQH0gK0jSZPiq6yvapXao/beibehang-Custom-wallpaper-3d-murals-sports-gym-large-mural-living-room-bedroom-restaurant-wall-papers-home.jpg");
+	}
+	50%, 70%{
+		background-image: url("https://ae01.alicdn.com/kf/HTB1sWiLcL9TBuNjy1zbq6xpepXao/3d-wallpaper-photo-wallpaper-custom-mural-kids-room-weightlifting-Gym-trendy-trendy-graffiti-restaurant-KTV-background.jpg_Q90.jpg_.webp");
+	}
+	75%, 100%{
+		background-image: url("https://ae01.alicdn.com/kf/HTB1BFWXq7CWBuNjy0Faq6xUlXXaP/Papel-tapiz-fotogr-fico-3d-para-paredes-mural-de-gimnasio-3d-personalizado-Retro-para-deportes-club.jpg");
+	}
+}
+.capa{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+}
+.info{
+	z-index: 1;
+	width: 100%;
+	max-width: 550px;
+	text-align: center;
+}
+
+
+
+
+.contenedor-servicio{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.contenedor-servicio img{
+	width: 40%;
+
+
+} 
+
+.checklist-servicio{
+	width: 45%;
+}
+
+.n-service {
+	margin-bottom: 7px;
+	color: #39AEA9;
+	font-family: 'Comfortaa', cursive;
+}
+
+
+.number{
+	display: inline-block;
+	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+ width: 30px;
+ height: 30px;
+ color: #fff;
+ text-align: center;
+ border-radius: 50%;
+ font-weight: 700%;
+ line-height: 30px ;
+ margin-right: 5px;
+
+}
+
+.subtitulo{
+	text-align: center;
+	font-weight: 300;
+	color: #39AEA9;
+	margin-bottom: 40px;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+.experts{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.cont-expert{
+	width: 23%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.cont-expert img{
+	width: 65%;
+	display: block;
+	margin: auto;
+}
+
+.n-expert{
+	display: inline-block;
+	margin-top: 20px;
+	width: 100%;
+	font-weight: 400;
+	font-family: 'Secular One', sans-serif;
+}
+
+
+.containerc{
+	width: 1000px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between ;
+
+
+}
+@media (max-width:300px){
+	.containerc{
+		flex-direction: column;
+	}
+}
+
+.containerc .card{
+	position: relative;
+
+}
+
+.containerc .card .face{
+	width: 300px;
+	height: 200px ;
+	transition: 0.5s;
+}
+
+.containerc .card .face.face1{
+	position: relative;
+	background: #e8eef3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	transform: translateY(100px);
+	flex-direction: row;
+
+	
+}
+
+.containerc .card:hover .face.face1{
+	transform: translateY(0px);
+
+
+}
+.containerc .card .face.face1 .content{
+	opacity: 0.2;
+	transition: 0.5s;
+}
+.containerc .card:hover .face.face1 .content{
+	opacity: 1;
+}
+.containerc .card .face.face1 .content img{
+	max-width: 100px;
+
+}
+.containerc .card .face.face1 .content h3{
+	margin: 10px 0 0;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5em;
+}
+.containerc .card .face.face2{
+
+
+}
+
+.containerc .card .face.face2{
+	position: relative;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+	transform: translateY( -100px);
+
+
+}
+
+.containerc .card:hover .face.face2{
+	transform: translateY(0);
+
+}
+
+.container .card .face.face p{
+	margin: 0;
+	padding: 0;
+	color: #F66B0E;
+
+}
+
+.container .card .face.face2 .content a{
+	margin: 15px 0 0;
+	display: inline-block; 
+	text-decoration: none;
+	font-weight: 900;
+	color: #ff9041;
+	padding: 5px;
+	border: 1px solid #e8eef3;
+
+}
+
+
+
+.containerc .card .face.face2 .content a:hover{
+	color: #000;
+
+	transition: 1s;
+
+}
+
+.suscripciones{
+	text-align: center;
+	align-items: center;
+	
+   margin: 100px;
+
+}
+.texto{
+	color: #fd9e11;
+}
+.suscripciones h2{
+	text-align: center;
+	align-items: center;
+	color: #39AEA9;
+	margin-bottom: 40px;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+   margin: 100px;
+   font-weight: 300;
+
+}
+.comprar a{
+	color: #EB5353;
+	font-weight: bolder;
+	font-size: 30px;
+}
+
+
+
+
+
+
+.price-table-wrapper {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 1vh;
+}
+.price-table-wrapper .featured-table {
+    box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.36);
+}
+.pricing-table{
+    padding-bottom: 1vh;
+    margin-bottom: 1vh
+}
+.price-table-wrapper .pricing-table {
+    display: inline-block;
+    border: 1px solid #C8C8C8;
+    border-radius: 10px;
+    background: white;
+    margin: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.price-table-wrapper .pricing-table__header {
+    padding: 20px;
+    font-size: 20px;
+}
+ .silver {
+    padding: 20px;
+    font-size: 20px;
+    color: #ec971f;
+    background: rgba(204, 204, 204, 0.57);
+}
+.bronze{
+    padding: 20px;
+    font-size: 20px;
+    color: #ec971f;
+    background: rgba(138, 109, 59, 0.3);
+}
+.gold{
+    padding: 20px;
+    font-size: 20px;
+    color: #ec971f;
+    background: rgba(249, 158, 3, 0.3);
+}
+.platinum{
+    padding: 20px;
+    font-size: 20px;
+    color: #ec971f;
+    background: rgba(111, 152, 165, 0.3);
+}
+.price-table-wrapper .pricing-table__price {
+    color: #ec971f;
+    padding: 20px;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 500;
+}
+.price-table-wrapper .pricing-table__button {
+    display: block;
+    background: #9A86A4;
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.price-table-wrapper .pricing-table__button:before {
+    position: absolute;
+    left: -20%;
+    top: -10%;
+    content: '';
+    width: 60%;
+    height: 220%;
+    transform: rotate(-30deg);
+    background: white;
+    opacity: .3;
+    transition: all 0.3s ease-in-out;
+}
+.price-table-wrapper .pricing-table__button:after {
+    position: absolute;
+    content: '>';
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    padding: 15px;
+    padding-right: 40px;
+    color: white;
+    opacity: 0;
+}
+.price-table-wrapper .pricing-table__button:hover {
+    background: #7858A6;
+}
+.price-table-wrapper .pricing-table__list {
+    padding: 20px;
+    color: #A0A0A0;
+    list-style: none;
+}
+.price-table-wrapper .pricing-table__list li {
+    padding: 15px;
+    border-bottom: 1px solid #C8C8C8;
+}
+.price-table-wrapper .pricing-table__list li:last-child {
+    border: none;
+}
+
+
+.price-table-wrapper .pricing-table:hover .pricing-table__button {
+    padding-left: 0;
+    padding-right: 2em;
+}
+
+.price-table-wrapper .pricing-table:hover .pricing-table__button:after {
+    opacity: 1;
+    padding-right: 1em;
+}
+.price_active{
+    -webkit-box-shadow: -1px -2px 55px 1px rgba(41, 61, 206, 0.57);
+    -moz-box-shadow: -1px -2px 55px 1px rgba(255,0,0,0.57);
+    box-shadow: -1px -2px 55px 1px rgba(16, 63, 163, 0.57);
+}
+#most:hover{
+   -webkit-box-shadow: -1px -2px 55px 1px rgba(26, 255, 0, 0.57);
+    -moz-box-shadow: -1px -2px 55px 1px rgba(46, 149, 35, 0.57);
+    box-shadow: -1px -2px 55px 1px rgba(25, 149, 56, 0.57);
+}
+.pricing-table__header{
+    text-transform: uppercase;
+    border-radius: 10px 10px 0 0;
+    border-color: black;
+}
+
+
+
+
+
+.footer{
+	background: #e8eef3;
+	padding:30px 0px;
+	text-align:center;
+	}
+	
+	.footer .row{
+	width:100%;
+	margin:1% 0%;
+	padding:0.6% 0%;
+	color: #000;
+	font-size:1.5em;
+
+	font-family: 'Quicksand', sans-serif;
+	}
+	
+	.footer .row a{
+	text-decoration:none;
+	color: #000;
+	transition:0.5s;
+	}
+	
+	.footer .row a:hover{
+	color: #C2DED1;
+	}
+	
+	.footer .row ul{
+	width:100%;
+	}
+	
+	.footer .row ul li{
+	display:inline-block;
+	margin:0px 30px;
+	}
+	
+	.footer .row a i{
+	font-size:2em;
+	margin:0% 1%;
+	}
+	
+	@media (max-width:720px){
+	.footer{
+	text-align:left;
+	padding:5%;
+	}
+	.footer .row ul li{
+	display:block;
+	margin:10px 0px;
+	text-align:left;
+	}
+	.footer .row a i{
+	margin:0% 3%;
+	}
+	}
